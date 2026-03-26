@@ -1,8 +1,9 @@
-package com.company.ems.WithState;
-
+package com.company.ems.State;
 public class LockedState implements State {
     private AudioPlayer player;
-    public LockedState(AudioPlayer player) {
+
+    @Override
+    public void setContext(AudioPlayer player) {
         this.player = player;
     }
 
@@ -14,6 +15,6 @@ public class LockedState implements State {
     @Override
     public void clickLock() {
         System.out.println(">> Đang khóa: Mở khóa.");
-        player.changeState(new ReadyState(player));
+        player.changeState(new ReadyState());
     }
 }

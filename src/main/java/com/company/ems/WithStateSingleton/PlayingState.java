@@ -1,18 +1,23 @@
 package com.company.ems.WithStateSingleton;
 
 public class PlayingState implements State {
-    public static final PlayingState INSTANCE = new PlayingState();
+    private static final PlayingState INSTANCE = new PlayingState();
+
     private PlayingState() {}
+
+    public static PlayingState getInstance() {
+        return INSTANCE;
+    }
 
     @Override
     public void clickPlay(AudioPlayer player) {
-        System.out.println(">> Đang phát: Tạm dừng nhạc.");
-        player.changeState(ReadyState.INSTANCE);
+        System.out.println(">> Playing → Pause");
+        player.changeState(ReadyState.getInstance());
     }
 
     @Override
     public void clickLock(AudioPlayer player) {
-        System.out.println(">> Đang phát: Khóa máy (nhạc vẫn chạy ngầm).");
-        player.changeState(LockedState.INSTANCE);
+        System.out.println(">> Playing → Lock");
+        player.changeState(LockedState.getInstance());
     }
 }

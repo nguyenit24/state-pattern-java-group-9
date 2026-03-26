@@ -1,19 +1,22 @@
 package com.company.ems.WithStateSingleton;
 
 public class AudioPlayer {
-    private State state = ReadyState.INSTANCE;
+    private State state;
 
-    public void changeState(State newState) {
-        this.state = newState;
+    public AudioPlayer() {
+        this.state = ReadyState.getInstance(); // singleton
+    }
+    // Lấy trạng thái hiện tại (Singleton)
+    public State getState(){
+        return state;
     }
 
-    // method để chứng minh hash id không thay đổi khi chuyển đổi trạng thái
-    public State getState() {
-        return this.state;
+    public void changeState(State state) {
+        this.state = state;
     }
 
     public void pressPlay() {
-        state.clickPlay(this);
+        state.clickPlay(this); 
     }
 
     public void pressLock() {

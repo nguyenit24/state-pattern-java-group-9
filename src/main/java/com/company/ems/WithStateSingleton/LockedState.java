@@ -1,18 +1,22 @@
 package com.company.ems.WithStateSingleton;
 
 public class LockedState implements State {
-    
-    public static final LockedState INSTANCE = new LockedState();
+    private static final LockedState INSTANCE = new LockedState();
+
     private LockedState() {}
+
+    public static LockedState getInstance() {
+        return INSTANCE;
+    }
 
     @Override
     public void clickPlay(AudioPlayer player) {
-        System.out.println("!! Máy đang khóa: Nút Play vô tác dụng.");
+        System.out.println("!! Locked → Do nothing");
     }
 
     @Override
     public void clickLock(AudioPlayer player) {
-        System.out.println(">> Máy đang khóa: Mở khóa.");
-        player.changeState(ReadyState.INSTANCE);
+        System.out.println(">> Locked → Unlock");
+        player.changeState(ReadyState.getInstance());
     }
 }
