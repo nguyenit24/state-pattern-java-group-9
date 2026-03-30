@@ -11,13 +11,13 @@ public class ReadyState implements State {
 
     @Override
     public void clickPlay(AudioPlayer player) {
-        System.out.println(">> Ready → Play");
+        System.out.println(">> Đang chờ: Bắt đầu phát nhạc.");
         player.changeState(PlayingState.getInstance());
     }
 
     @Override
     public void clickLock(AudioPlayer player) {
-        System.out.println(">> Ready → Lock");
+        System.out.println(">> Đang chờ: Khóa máy.");
         player.changeState(LockedState.getInstance());
     }
 }

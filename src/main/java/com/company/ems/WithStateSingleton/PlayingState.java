@@ -11,13 +11,13 @@ public class PlayingState implements State {
 
     @Override
     public void clickPlay(AudioPlayer player) {
-        System.out.println(">> Playing → Pause");
+        System.out.println(">> Đang phát: Tạm dừng.");
         player.changeState(ReadyState.getInstance());
     }
 
     @Override
     public void clickLock(AudioPlayer player) {
-        System.out.println(">> Playing → Lock");
+        System.out.println(">> Đang phát: Khóa máy (nhạc vẫn chạy).");
         player.changeState(LockedState.getInstance());
     }
 }

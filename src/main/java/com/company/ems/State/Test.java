@@ -10,7 +10,8 @@ public class Test {
         player1.pressPlay();
         player1.pressLock();
         player1.pressPlay();
-
+        player1.pressLock();
+        
         System.out.println("\n=== (LockedState) ===");
         AudioPlayer player2 = new AudioPlayer(new LockedState());
 

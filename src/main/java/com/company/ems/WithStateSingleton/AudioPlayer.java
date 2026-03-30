@@ -6,6 +6,7 @@ public class AudioPlayer {
     public AudioPlayer() {
         this.state = ReadyState.getInstance(); // singleton
     }
+    
     // Lấy trạng thái hiện tại (Singleton)
     public State getState(){
         return state;

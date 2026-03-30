@@ -11,12 +11,12 @@ public class LockedState implements State {
 
     @Override
     public void clickPlay(AudioPlayer player) {
-        System.out.println("!! Locked → Do nothing");
+        System.out.println("!! Đang khóa: Không làm gì cả.");
     }
 
     @Override
     public void clickLock(AudioPlayer player) {
-        System.out.println(">> Locked → Unlock");
+        System.out.println(">> Đang khóa: Mở khóa.");
         player.changeState(ReadyState.getInstance());
     }
 }
