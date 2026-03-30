@@ -1,4 +1,4 @@
-package com.company.ems.WithoutState;
+package com.demo.state.WithoutState;
 
 public class Test {
     public static void main(String[] args) {

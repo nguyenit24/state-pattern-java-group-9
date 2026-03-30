@@ -1,4 +1,4 @@
-package com.company.ems.State;
+package com.demo.state.State;
 
 public class Test {
     public static void main(String[] args) {

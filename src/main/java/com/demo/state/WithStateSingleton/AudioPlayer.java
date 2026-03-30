@@ -1,4 +1,4 @@
-package com.company.ems.WithStateSingleton;
+package com.demo.state.WithStateSingleton;
 
 public class AudioPlayer {
     private State state;

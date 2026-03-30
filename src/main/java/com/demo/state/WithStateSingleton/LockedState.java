@@ -1,4 +1,4 @@
-package com.company.ems.WithStateSingleton;
+package com.demo.state.WithStateSingleton;
 
 public class LockedState implements State {
     private static final LockedState INSTANCE = new LockedState();

@@ -1,4 +1,4 @@
-package com.company.ems.WithStateSingleton;
+package com.demo.state.WithStateSingleton;
 
 public interface State {
     void clickPlay(AudioPlayer player);

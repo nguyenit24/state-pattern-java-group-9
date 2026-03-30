@@ -1,4 +1,4 @@
-package com.company.ems.WithStateSingleton;
+package com.demo.state.WithStateSingleton;
 
 public class Test {
     public static void main(String[] args) {

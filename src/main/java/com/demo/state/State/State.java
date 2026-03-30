@@ -1,4 +1,4 @@
-package com.company.ems.State;
+package com.demo.state.State;
 
 public interface State {
     void setContext(AudioPlayer player);

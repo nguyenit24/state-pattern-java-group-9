@@ -1,4 +1,4 @@
-package com.company.ems.WithStateSingleton;
+package com.demo.state.WithStateSingleton;
 
 public class PlayingState implements State {
     private static final PlayingState INSTANCE = new PlayingState();

@@ -1,4 +1,4 @@
-package com.company.ems.State;
+package com.demo.state.State;
 
 public class ReadyState implements State {
     private AudioPlayer player;

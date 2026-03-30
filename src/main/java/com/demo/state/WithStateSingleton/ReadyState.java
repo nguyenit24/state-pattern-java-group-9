@@ -1,4 +1,4 @@
-package com.company.ems.WithStateSingleton;
+package com.demo.state.WithStateSingleton;
 
 public class ReadyState implements State {
     private static final ReadyState INSTANCE = new ReadyState();
